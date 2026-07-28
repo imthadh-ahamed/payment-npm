@@ -1,0 +1,31 @@
+# Source (only built output is published — see package.json "files")
+src/
+test/
+examples/
+docs/
+scripts/
+
+# Config
+tsconfig*.json
+eslint.config.js
+commitlint.config.js
+lint-staged.config.js
+.editorconfig
+.prettierrc
+.prettierignore
+.npmrc
+
+# Tooling
+.github/
+.husky/
+.vscode/
+
+# Build artifacts / caches
+*.tsbuildinfo
+coverage/
+.eslintcache
+
+# Misc
+.git/
+.gitignore
+*.log
