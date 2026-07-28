@@ -1,0 +1,95 @@
+{
+  "name": "@company/payment-platform",
+  "version": "0.1.0",
+  "description": "Framework-agnostic, provider-agnostic payment platform for Node.js applications, built on Clean/Hexagonal Architecture.",
+  "keywords": [
+    "payments",
+    "payment-gateway",
+    "razorpay",
+    "stripe",
+    "paypal",
+    "sdk",
+    "typescript",
+    "enterprise",
+    "clean-architecture",
+    "hexagonal-architecture"
+  ],
+  "license": "MIT",
+  "author": "Your Company Name <engineering@yourcompany.example>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/your-org/payment-platform.git"
+  },
+  "homepage": "https://github.com/your-org/payment-platform#readme",
+  "bugs": {
+    "url": "https://github.com/your-org/payment-platform/issues"
+  },
+  "funding": {
+    "type": "github",
+    "url": "https://github.com/sponsors/your-org"
+  },
+  "type": "module",
+  "engines": {
+    "node": ">=18.18.0"
+  },
+  "packageManager": "pnpm@10.13.1",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "sideEffects": false,
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "clean": "rimraf dist coverage",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "prepare": "husky"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^19.5.0",
+    "@commitlint/config-conventional": "^19.5.0",
+    "@eslint/js": "^9.14.0",
+    "@types/node": "^20.17.0",
+    "eslint": "^9.14.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-import-resolver-typescript": "4.4.5",
+    "eslint-plugin-import-x": "^4.4.0",
+    "eslint-plugin-promise": "^7.1.0",
+    "eslint-plugin-security": "^3.0.1",
+    "eslint-plugin-unicorn": "^56.0.0",
+    "husky": "^9.1.6",
+    "lint-staged": "^15.2.10",
+    "prettier": "^3.3.3",
+    "rimraf": "^6.0.1",
+    "typescript": "^5.6.3",
+    "typescript-eslint": "^8.13.0",
+    "vitest": "^2.1.4"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild",
+      "unrs-resolver"
+    ]
+  }
+}
